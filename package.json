@@ -1,8 +1,12 @@
 {
   "scripts": {
-    "start": "servor --reload"
+    "watch:sass": "sass --watch styles.scss:styles.css",
+    "serve": "servor --reload",
+    "start": "concurrently \"npm run watch:sass\" \"npm run serve\""
   },
   "dependencies": {
+    "concurrently": "^9.2.1",
+    "sass": "^1.94.0",
     "servor": "^4.0.2"
   }
 }
